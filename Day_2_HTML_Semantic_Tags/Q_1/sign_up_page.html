@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+            background: rgb(255, 255, 255);
+            border-radius: 12px 12px 0 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .welcome-img {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        nav {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 15px;
+            border-radius: 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+        
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        fieldset {
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            margin-bottom: 20px;
+        }
+         button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREkFBDoqFSivKRnkdy08mkK8fsyraQ_ptgo59Po8fKxYrVrlOLt_IDGA&s" alt="Welcome Image" class="welcome-img">
+        <h1>Welcome to Our Online Library</h1>
+        <p>Join thousands of users who trust our service. Create your account today and get started in minutes!And read your favorite book anywere.</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="content-wrapper">
+        <main>
+            <h2>Create Your Account</h2>
+            <form>
+                <fieldset>
+                    <legend>Sign Up Form</legend>
+                    
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="Enter your age" min="1" max="100" required>
+                    
+                    <label>Gender</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="male" name="gender" value="male" required>
+                            <label for="male">Male</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="other" name="gender" value="other">
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <button type="submit">Signup</button>
+            </form>
+        </main>
+        
+        <aside>
+            <h3>Why Join Us?</h3>
+            <ul>
+                <li><span></span> Free to start</li>
+                <li><span></span> 24/7 support</li>
+                <li><span></span> Premium features</li>
+                <li><span></span> Secure platform</li>
+            </ul>
+        </aside>
+    </div>
+    
+    <footer>
+        <p>Need help? <a href="https://www.google.com">Click here</a> for support and more information.</p>
+    </footer>
+</body>
+</html>
