@@ -1,11 +1,22 @@
-let num = 15
-
-function checkPrime(num){
-
-    if(count==2){
-        return true
+function isPrime(num) {
+  // Handle edge cases
+  if (num <= 1) {
+    return false;
+  }
+  
+  if (num === 2) {
+    return true;
+  }
+  
+  if (num % 2 === 0) {
+    return false;
+  }
+  
+  for (let i = 3; i * i <= num; i += 2) {
+    if (num % i === 0) {
+      return false;
     }
-    else{
-        return false
-    }
+  }
+  
+  return true;
 }
