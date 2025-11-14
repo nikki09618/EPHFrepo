@@ -1,5 +1,4 @@
 function isPrime(num) {
-  // Handle edge cases
   if (num <= 1) {
     return false;
   }
@@ -19,4 +18,12 @@ function isPrime(num) {
   }
   
   return true;
+}
+function evenOdd(num) {
+  // Check if the number is even
+  if (num % 2 === 0) {
+    return true;
+  }
+  
+  return false;
 }
