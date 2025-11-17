@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Container {
+            width: 300px;
+            height: 400px;
+            background: white;
+            padding: 20px;
+            margin: auto;
+            border: 2px solid black;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image {
+            width: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #667eea;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="Container">
+        <img src="https://media.licdn.com/dms/image/v2/D5603AQEMDs1EiuDnDQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1677408145921?e=1764201600&v=beta&t=rlZfiVFgIf1X-tn3cix_CA5XHECJ-YPEN0dxFvz0GeA" 
+             alt="Profile Picture of Nikita" 
+             class="image">
+        <h2>Nikita Patel</h2>
+        <p>Full Stack Developer with a passion for creating beautiful and functional web applications. Love coding and learning new technologies.</p>
+    </div>
+</body>
+</html>
