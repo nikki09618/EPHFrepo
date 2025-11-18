@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <title>Weekly Schedule</title>
+    <style>
+        body{
+            background: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 95%;
+            max-width: 1100px;
+            margin: 30px auto;
+            text-align: center;
+        }
+        h1 {
+            font-family: "Brush Script MT", cursive;
+            font-size: 55px;
+            font-weight: 700;
+            color: #1e2a41;
+            margin-bottom: 20px;
+        }
+        .time-table {
+            font-family: "Varela Round", sans-serif;
+            display: grid;
+            grid-template-columns: 120px repeat(5, 1fr);
+            gap: 12px;
+            align-items: center;
+        }
+        .time {
+            background: #bceff4;
+            padding: 14px 10px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        .header {
+            background: #f7c9de;
+            padding: 15px 10px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .header.y {
+            background: #f7e8a6;
+        }
+        .schedule {
+            background: #f7c9de;
+            padding: 15px 10px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .schedule.y {
+            background: #f7e8a6;
+        }
+        .notes {
+            font-family: "Varela Round", sans-serif;
+            background: #bceff4;
+            margin-top: 25px;
+            padding: 18px;
+            border-radius: 20px;
+            text-align: left;
+        }
+        .notes h3 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weekly Schedule</h1>
+        
+        <div class="time-table">
+            <div class="time" style="background-color: #ffffff;"></div>
+            <div class="header">Monday</div>
+            <div class="header y">Tuesday</div>
+            <div class="header">Wednesday</div>
+            <div class="header y">Thursday</div>
+            <div class="header">Friday</div>
+
+            <!-- 08:00 -->
+            <div class="time">08:00</div>
+            <div class="schedule">Mathematics</div>
+            <div class="schedule y">English</div>
+            <div class="schedule">Science</div>
+            <div class="schedule y">Mathematics</div>
+            <div class="schedule">Art & Craft</div>
+
+            <!-- 09:00 -->
+            <div class="time">09:00</div>
+            <div class="schedule">English</div>
+            <div class="schedule y">Mathematics</div>
+            <div class="schedule">English</div>
+            <div class="schedule y">Social Studies</div>
+            <div class="schedule">Computer</div>
+
+            <!-- 10:00 -->
+            <div class="time">10:00</div>
+            <div class="schedule">Science</div>
+            <div class="schedule y">PE</div>
+            <div class="schedule">Mathematics</div>
+            <div class="schedule y">English</div>
+            <div class="schedule">Music</div>
+
+            <!-- 11:00 -->
+            <div class="time">11:00</div>
+            <div class="schedule">Break</div>
+            <div class="schedule y">Break</div>
+            <div class="schedule">Break</div>
+            <div class="schedule y">Break</div>
+            <div class="schedule">Break</div>
+
+            <!-- 12:00 -->
+            <div class="time">12:00</div>
+            <div class="schedule">Social Studies</div>
+            <div class="schedule y">Science</div>
+            <div class="schedule">Hindi</div>
+            <div class="schedule y">Science</div>
+            <div class="schedule">Library</div>
+
+            <!-- 13:00 -->
+            <div class="time">13:00</div>
+            <div class="schedule">Hindi</div>
+            <div class="schedule y">Art & Craft</div>
+            <div class="schedule">PE</div>
+            <div class="schedule y">Computer</div>
+            <div class="schedule">Mathematics</div>
+
+            <!-- 14:00 -->
+            <div class="time">14:00</div>
+            <div class="schedule">Lunch Break</div>
+            <div class="schedule y">Lunch Break</div>
+            <div class="schedule">Lunch Break</div>
+            <div class="schedule y">Lunch Break</div>
+            <div class="schedule">Lunch Break</div>
+
+            <!-- 15:00 -->
+            <div class="time">15:00</div>
+            <div class="schedule">Music</div>
+            <div class="schedule y">Hindi</div>
+            <div class="schedule">Computer</div>
+            <div class="schedule y">Art & Craft</div>
+            <div class="schedule">Activity Time</div>
+
+            <!-- 16:00 -->
+            <div class="time">16:00</div>
+            <div class="schedule">Games</div>
+            <div class="schedule y">Social Studies</div>
+            <div class="schedule">Games</div>
+            <div class="schedule y">Games</div>
+            <div class="schedule">Assembly</div>
+        </div>
+
+        <div class="notes">
+            <h3>Note:</h3>
+        </div>
+    </div>
+</body>
+</html>
