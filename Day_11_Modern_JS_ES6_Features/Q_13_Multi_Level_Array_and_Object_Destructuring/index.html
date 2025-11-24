@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L1 - Multi-Level Array and Object Destructuring</title>
+</head>
+<body>
+    <h3>L1 - Multi-Level Array and Object Destructuring</h3>
+</body>
+<script>
+      const people = [
+  {
+    name: "Alice",
+    address: {
+      city: "New York",
+      street: {
+        name: "Broadway",
+        number: 123
+      }
+    }
+  },
+  {
+    name: "Bob",
+    address: {
+      city: "Los Angeles",
+      street: {
+        name: "Sunset Boulevard",
+        number: 456
+      }
+    }
+  }
+];
+
+// Solution using multi-level destructuring
+function formatPeopleInfo(peopleArray) {
+  return peopleArray.map(({ 
+    name, 
+    address: { 
+      city, 
+      street: { name: streetName } 
+    } 
+  }) => {
+    return `${name} lives in ${city} on ${streetName}`;
+  });
+}
+
+// Execute and display results
+const result = formatPeopleInfo(people);
+
+console.log("Input:");
+console.log(people);
+console.log("\nOutput:");
+console.log(result);
+
+// Display in a more readable format
+console.log("\nFormatted Output:");
+result.forEach(info => console.log(`- ${info}`));
+</script>
+</html>

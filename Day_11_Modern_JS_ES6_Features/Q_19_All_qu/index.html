@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solve all in single file</title>
+</head>
+<body>
+    <h3>Solve all in single file</h3>
+</body>
+  <script>
+   //1. Template Literals + Expressions
+       //a) Print: "5 + 7 = 12" using a template literal where the result is calculated inside ${ }.
+
+        console.log(`5 + 7 = ${5 + 7}`);
+
+       //b) Create a multi-line string using template literals (3 lines).
+
+        const message = `
+        This is line one.
+        This is line two.
+        This is line three.
+        `;
+
+          console.log(message);
+
+       //c) Given firstName = "John" and lastName = "Doe", print the full name using a template literal.
+
+          const firstName = "John";
+          const lastName = "Doe";
+
+           console.log(`${firstName} ${lastName}`);
+
+    /// 2. Arrow Functions & this
+        
+        //a) Convert this function into an arrow function:
+
+        const square = n => n * n;
+
+        //b) Explain why the following logs undefined:
+
+        const obj = {
+          value: 50,
+          test: () => console.log(this.value)
+        };
+        obj.test();
+
+        // Arrow functions do not have their own this.
+        // Instead, they inherit this from their surrounding (lexical) scope.
+        // In this case, the surrounding scope is not obj, but the global/window scope.
+        // The global scope does not have a property called value, so this.value is undefined.
+        // Thus, undefined is printed.
+
+        //c) Rewrite it using a normal function so that printing works.
+
+        const object = {
+          value: 50,
+          test: function () {
+            console.log(this.value);
+         }
+        };
+        object.test();
+
+    /// 3. Rest, Spread & Copying Objects
+          
+        //a) Use spread to make a shallow copy of this object:  
+        
+        const product = { name: "Pen", price: 10 };
+
+        const copyProduct = { ...product };
+        console.log("copyproduct",copyProduct)
+
+        //b) Merge these two objects using spread:
+
+        const c = { x: 1 };
+        const d = { y: 2 };
+
+        const merged = { ...c, ...d };
+        console.log("merged",merged)
+
+        //c) Write a function maxValue(...nums) (rest operator) that returns the largest number.
+
+        function maxValue(...nums) {
+          return Math.max(...nums);
+        }
+
+        console.log(maxValue(1, 5, 3, 10));
+
+    ///4. Destructuring & Optional Chaining    
+
+        //a) Destructure to extract a and b:
+
+        const arr = [10, 20, 30];
+        const [a, b] = arr;
+
+        console.log(a);
+        console.log(b); 
+
+        //b) Destructure the object to extract brand:
+
+        const laptop = { brand: "Dell", ram: "8GB" };
+        const { brand } = laptop;
+
+        console.log(brand);
+
+        //c) Safely access the following using optional chaining:
+
+        const info = {};
+
+        console.log(info?.name);  // undefined
+
+
+    ///5. Scoping (let/var/const)  
+    
+        //a) What will this print?
+
+        for (var i = 0; i < 3; i++) {}
+        console.log(i);
+          
+            ///var is function-scoped, not block-scoped.
+
+        //b) What will this print?
+
+        // for (let j = 0; j < 3; j++) {}
+        // console.log(j);
+
+            //ReferenceError: j is not defined
+            //let is block-scoped.
+
+        //c) Why is const used for values that should not be reassigned?
+
+        // for (const j = 0; j < 3; j++) {}
+        // console.log(j);
+
+            //const creates a block-scoped variable whose binding cannot be reassigned.
+
+
+    /// 6. Ternary Operator – Practice
+    
+        //a) Convert this to a ternary:
+
+        let kmph = 75;   // example value
+        let speed = kmph > 60 ? "Fast" : "Normal";
+
+        console.log("speed",speed);
+
+
+        //b) Write a ternary that prints "Adult" if age ≥ 18, else "Minor".
+
+        let age = 20;
+        let status = age >= 18 ? "Adult" : "Minor";
+
+        console.log("status",status);
+
+
+        //c) Write a ternary to check: Positive → "Positive" Zero → "Zero" Negative → "Negative" (Hint: use nested ternary)
+
+        let num = 10;
+        let type = num > 0 ? "Positive" : num === 0 ? "Zero" : "Negative";
+
+        console.log("type",type);
+
+    /// 7. Spread, Rest & Arrays
+
+        //a) Add elements 4, 5 to this array using spread:
+
+        const nums = [1, 2, 3];
+        const newNums = [...nums, 4, 5];
+        console.log(newNums);
+
+        //b) Combine these arrays using spread:
+
+        const p = ["x", "y"];
+        const q = ["z"];
+        const combined = [...p, ...q];
+        console.log(combined);
+
+        //c) Write a function using rest: printNames("A","B","C") → returns ["A","B","C"].
+
+        function printNames(...names) {
+          return names;
+        }
+        console.log(printNames("A", "B", "C"));
+
+    /// 8. Object Destructuring & Shorthand
+
+        //a) Destructure the following:
+
+        const user = { id: 101, Status: "active" };
+        const { id, Status } = user;
+
+        console.log(id);
+        console.log(Status);
+
+        //b) Convert this to shorthand:
+
+        const Id = 101;
+        const role = "admin";
+
+        const User = {
+           Id,
+           role
+        };
+
+        //c) Create an object using shorthand and add a method using shorthand syntax.
+
+        const name = "Arjun";
+        const Age = 25;
+
+        const person = {
+            name,
+            Age,
+         // method shorthand
+          greet() {
+          console.log(`Hello, my name is ${this.name} and I am ${this.Age} years old.`);
+          }
+        };
+
+person.greet();
+
+    /// 9. Template Literals (More Practice)
+
+        //a) Use a template literal to print today’s date using: new Date().toDateString() 
+
+        console.log(`Today's date is: ${new Date().toDateString()}`);
+
+        //b) Create a template literal that prints: "Hello NAME, your score is SCORE/100"
+
+        const Name = "Nikita";
+        const score = 98;
+
+        console.log(`Hello ${Name}, your score is ${score}/100`);
+
+
+
+    /// 10. Arrow Function Shorthands
+
+        //a) Convert a normal function to a one-line arrow function for addition.
+
+        const add = (a, b) => a + b;
+        console.log(add(5, 7));
+
+        //b) Write an arrow function isAdult(age) that returns true/false
+
+        const isAdult = age => age >= 18;
+
+        console.log(isAdult(20));
+        console.log(isAdult(15));
+
+        //c) Create an arrow function double that doubles a number.
+
+        const double = n => n * 2;
+
+        console.log(double(8));
+
+    /// 11. Spread Operator (Arrays & Objects)
+
+        //a) Clone an array using spread.
+
+        const Nums = [1, 2, 3];
+        const copy = [...Nums];
+
+        console.log(copy);
+
+        //b) Add element 100 to the beginning of an array using spread.
+
+        const Num = [1, 2, 3];
+        const newArray = [100, ...Num];
+
+        console.log(newArray);
+
+        //c) Merge two objects and override one property using spread.
+
+        const obj1 = {
+          name: "Alice",
+          age: 20
+        };
+
+        const obj2 = {
+          age: 25,
+          city: "Delhi"
+        };
+
+        const Merged = {
+          ...obj1,
+          ...obj2
+        };
+
+        console.log(Merged);
+
+    /// 12. Optional Chaining (More Practice)
+
+        //a) Access user.address.city safely:
+
+        const user1 = {
+          name: "Alex",
+          address: {
+          city: "Bangalore"
+          }
+        };
+
+        console.log(user1?.address?.city);
+
+        //b) Access user.job.title safely (should print undefined).
+
+        console.log(user?.job?.title);
+
+        //c) Write an example where optional chaining prevents a runtime error.
+
+        const product1 = {
+           name: "Laptop"
+        };
+
+        console.log(product?.details?.specs?.ram);  
+
+  </script>
+</html>

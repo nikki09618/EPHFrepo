@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>L0 - Convert to Arrow Function with Default Parameters</h3>
+</body>
+  <script>
+     const multiply = (a = 1, b = 1) => a * b;
+
+     console.log(multiply(3, 4));  // Output: 12
+     console.log(multiply());      // Output: 1
+     console.log(multiply(5));     // Output: 5 
+     console.log(multiply(2, 3));  // Output: 6
+  </script>
+</html>

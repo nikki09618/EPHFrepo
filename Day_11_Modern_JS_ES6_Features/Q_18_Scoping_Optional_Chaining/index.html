@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoping & Optional Chaining</title>
+</head>
+<body>
+    <h3>Scoping & Optional Chaining</h3>
+</body>
+  <script>
+    ///a) What is the output?
+
+    if (true) {
+  let x = 10;
+  var y = 20;
+}
+console.log(y); 
+///console.log(y) prints 20 because var has function scope (or global scope if not in a function).
+/// Variables declared with var are not block-scoped, so y is accessible outside the if block.
+//console.log(x);
+///console.log(x) throws a ReferenceError because let has block scope. The variable x only exists 
+///within the curly braces {} of the if statement and is not accessible outside of it.
+
+///b) Access the following safely using optional chaining:
+
+const profile = {
+  user: {
+    details: {
+      email: "test@mail.com"
+    }
+  }
+};
+
+console.log(profile.user.details.email); 
+console.log(profile.user.details.phone); 
+
+//c) Create an example where optional chaining prevents a runtime error when accessing a missing nested property.
+
+const user = {
+  profile: {
+    name: "Aarav"
+  }
+};
+
+console.log(user.profile.address?.city);
+
+
+
+  </script>
+</html>

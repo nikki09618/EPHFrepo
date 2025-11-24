@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square and Cube of a Number with Implicit Return</title>
+</head>
+<body>
+    <h3>Square and Cube of a Number with Implicit Return</h3>
+</body>
+  <script>
+    const squareAndCube = n => ({ square: n ** 2, cube: n ** 3 });
+
+    console.log(squareAndCube(5));  // { square: 25, cube: 125 }
+    console.log(squareAndCube(3));  // { square: 9, cube: 27 }
+    console.log(squareAndCube(10)); // { square: 100, cube: 1000 }
+  </script>
+</html>

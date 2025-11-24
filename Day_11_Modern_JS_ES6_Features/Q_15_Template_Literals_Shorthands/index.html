@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literals & Shorthands</title>
+</head>
+<body>
+    <h3>Template Literals & Shorthands</h3>
+</body>
+  <script>
+     // a) Template Literals
+const username = "Arjun";
+const course = "JavaScript";
+
+console.log(`Hello ${username}, welcome to the ${course} course!`);
+
+
+// b) Object Shorthand
+const name = "Sam";
+const age = 21;
+
+const student = {
+  name,
+  age,
+  greet() {
+    console.log("Hello");
+  }
+};
+
+
+// c) Arrow Function Shorthand
+const getFullName = (first, last) => `${first} ${last}`;
+
+// Example use:
+console.log(getFullName("Sam", "Wilson"));
+student.greet();
+
+
+  </script>
+</html>

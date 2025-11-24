@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread, Rest & Destructuring
+</title>
+</head>
+<body>
+    <h3>Spread, Rest & Destructuring</h3>
+</body>
+  <script>
+    //a) Merge arrays using spread operator
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5];
+
+const mergedArray = [...arr1, ...arr2];
+console.log("a) Merged Array:", mergedArray);
+
+// b) Sum function using rest operator
+
+function sum(...nums) {
+  return nums.reduce((total, num) => total + num, 0);
+}
+
+console.log("sum(1, 2, 3):", sum(1, 2, 3));
+console.log("sum(5):", sum(5)); 
+
+// c) Multi-level object destructuring
+const user = {
+  name: "Alice",
+  age: 22,
+  address: {
+    city: "Bangalore",
+    pin: 560001
+  }
+};
+
+// Destructure name, city, and pin
+const { 
+  name, 
+  address: { city, pin } 
+} = user;
+
+console.log("name:", name);
+console.log("city:", city);
+console.log("pin:", pin);
+
+  </script>
+</html>
