@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L0 - Transforming and Filtering with map() and forEach()</title>
+</head>
+<body>
+    <h3>L0 - Transforming and Filtering with map() and forEach()</h3>
+</body>
+  <script>
+    function processProducts(products) {
+  // Step 1: Use map() to extract product names
+  const productNames = products.map(product => product.name);
+
+  // Step 2: Use forEach() to log messages based on price
+  products.forEach(product => {
+    if (product.price > 50) {
+        console.log(`${product.name} is above $50`);
+      } else {
+        console.log(`${product.name} is below $50`);
+      }
+     });
+
+     return productNames; // Returning names if needed
+    }
+    
+const products = [
+  { name: "Laptop", price: 1000 },
+  { name: "Mouse", price: 20 }
+];
+
+processProducts(products);
+
+  </script>
+</html>

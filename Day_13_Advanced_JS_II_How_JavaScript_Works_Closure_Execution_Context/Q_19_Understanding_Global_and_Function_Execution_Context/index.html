@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title: L0 - Understanding Global and Function Execution Context</title>
+</head>
+<body>
+    <h3>Title: L0 - Understanding Global and Function Execution Context</h3>
+</body>
+  <script>
+       // 1. Global variable
+       let age = 25;  // Global execution context
+
+       // 2. Function that displays the global variable
+       function displayAge() {
+       console.log("Age inside displayAge():", age);
+       }
+
+       // 3. Function that modifies the global variable
+       function changeAge() {
+         age = 30;  // Updating the global variable
+       console.log("Age inside changeAge():", age);
+       }
+
+       // Calling the functions
+       displayAge();
+       changeAge();
+
+       // Checking global age after update
+       console.log("Updated global age:", age);
+
+  </script>
+</html>

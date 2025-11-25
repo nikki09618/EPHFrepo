@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Questions on Closures</title>
+</head>
+<body>
+    <h3>Assignment Questions on Closures</h3>
+</body>
+   <script>
+     ///Question 1: Closure-Based Counter Implementation
+       //Implement the createCounter function.
+    function createCounter() {
+     let count = 0; // private variable
+
+      return {
+        increment: function () {
+            count++;
+            console.log("Current count:", count);
+        },
+
+        decrement: function () {
+            count--;
+            console.log("Current count:", count);
+        }
+     };
+    }
+
+       //Explain how closures are being used to encapsulate the counter variable.
+
+            //  The variable count is declared inside the function createCounter.
+            // It is not returned, so it cannot be accessed directly from outside.
+            // The returned object has functions (increment, decrement, getCount) that retain access to the count variable even after createCounter finishes executing.
+            // This is possible because of closures, which allow inner functions to "remember" variables from their parent scope.
+            // Thus, count behaves like a private variable.
+
+       //What happens if multiple counters are created using the same function? Provide examples to demonstrate this behavior.
+
+        const counter = createCounter();
+        counter.increment(); // Output: Current count: 1
+        counter.increment(); // Output: Current count: 2
+        counter.decrement(); // Output: Current count: 1       
+
+    /// Question 2: Simulating Private Variables with Closures
+    
+       //Implement the createBankAccount function.
+
+       function createBankAccount() {
+         let balance = 0; // private variable
+
+         return {
+            deposit(amount) {
+              balance += amount;
+              console.log(`Deposited: ${amount}`);
+            },
+
+            withdraw(amount) {
+                if (amount > balance) {
+                   console.log("Insufficient balance");
+                } else {
+                   balance -= amount;
+                   console.log(`Withdrawn: ${amount}`);
+                }
+            },
+
+            checkBalance() {
+                return balance;
+            }
+          };
+        }
+
+        const account = createBankAccount();
+        account.deposit(500); // Output: Deposited: 500
+        account.withdraw(200); // Output: Withdrawn: 200
+        account.withdraw(400); // Output: Insufficient balance
+
+
+       //How does the closure ensure that the balance variable is private?
+
+       console.log(account.balance); // Output: undefined
+
+        //   A closure is created when an inner function remembers the variables from its outer function even after the outer function has finished executing.
+        // count is defined inside createCounter().
+        // It is not returned or exposed directly.
+        // Only the inner functions increment() and decrement() can access and modify count.
+        // This means:
+        // No code outside createCounter() can access or modify count directly.
+        // count behaves like a private variable, similar to private properties in object-oriented programming.
+        // Closures preserve the internal state (count) across multiple calls.
+
+
+       //Modify the function to include a transactionHistory feature that stores all transactions
+
+    function createBankAccount() {
+       let balance = 0;                     // private
+       let transactionHistory = [];         // private
+
+       return {
+            deposit(amount) {
+                balance += amount;
+                transactionHistory.push({ type: "Deposit", amount });
+                console.log(`Deposited: ${amount}`);
+            },
+
+            withdraw(amount) {
+                if (amount > balance) {
+                    console.log("Insufficient balance");
+                    transactionHistory.push({ type: "Failed Withdrawal", amount });
+                } else {
+                    balance -= amount;
+                    transactionHistory.push({ type: "Withdrawal", amount });
+                    console.log(`Withdrawn: ${amount}`);
+                }   
+            },
+
+            checkBalance() {
+                return balance;
+            },
+
+            getHistory() {
+                return transactionHistory;
+            }
+        };
+    }
+
+        const Account = createBankAccount();
+
+        Account.deposit(500);  
+        Account.withdraw(200);
+        Account.withdraw(400);
+
+        console.log(Account.getHistory());
+
+        //explain how closures enable this feature.
+
+        // transactionHistory exists inside the parent function like balance.
+        // It is also not directly accessible from outside.
+        // Each transaction is recorded by the inner methods.
+        // Closure ensures the variable persists and updates across method calls.
+
+
+
+   </script>
+</html>
