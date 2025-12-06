@@ -74,7 +74,7 @@ No backend or database is needed.
 👨‍💻 Author
 
 Developed by [Nikita]
-Date: [30/11/2025]
+Date: [05/11/2025]
 
 📜 License
 
