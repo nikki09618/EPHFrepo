@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>simple Todo application</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: whitesmoke;
+        margin: 0;
+        padding: 40px 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 600px;
+        background: white;
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 0.4s ease;
+      }
+
+      h1 {
+        text-align: center;
+        color: rgb(72, 71, 71);
+        margin-bottom: 25px;
+        font-size: 28px;
+      }
+
+      .todo {
+        background: rgb(230, 222, 222);
+        padding: 18px 15px;
+        border-radius: 10px;
+        margin: 12px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: transform 0.15s ease, box-shadow 0.2s ease;
+        border: 1px solid rgb(250, 235, 207);
+      }
+
+      .todo:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+      }
+
+      .completed {
+        text-decoration: line-through;
+        color: #9b9b9b;
+      }
+
+      .btn-group {
+        display: flex;
+        gap: 8px;
+      }
+
+      button {
+        padding: 8px 14px;
+        cursor: pointer;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        transition: 0.2s ease;
+      }
+
+      .delete-btn {
+        background: rgb(244, 45, 45);
+        color: white;
+      }
+
+      .delete-btn:hover {
+        background: rgb(129, 3, 3);
+      }
+
+      .toggle-btn {
+        background: rgb(10, 181, 10);
+        color: white;
+      }
+
+      .toggle-btn:hover {
+        background: rgb(1, 83, 1);
+      }
+
+      #no-todos {
+        text-align: center;
+        margin-top: 25px;
+        color: #666;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to My Todo App</h1>
+      <div id="todo-list"></div>
+      <p id="no-todos" style="display: none">No Todos Available</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
