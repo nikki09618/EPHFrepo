@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Management Web App using Firebase</title>
+    <link rel="stylesheet" href="./style/style.css">
+  </head>
+  <body>
+    <h1>Book Management App</h1>
+
+    <form id="bookForm">
+      <input type="text" id="title" placeholder="Title" required /><br />
+      <input type="text" id="author" placeholder="Author" required /><br />
+      <input type="number" id="price" placeholder="Price" required /><br />
+      <input type="text" id="image" placeholder="Image URL" required /><br />
+      <button type="submit">Add Book</button>
+      <button id="addBtn">Insert Books</button>
+    </form>
+
+    
+      <div id="booksGrid"></div>
+      <script type="module" src="./script/main.js"></script>
+  </body>
+</html>
