@@ -1,0 +1,27 @@
+
+/* Navbar Styles */
+.navbar {
+  background-color: #4a90e2;
+  padding: 15px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Content Section */
+.content {
+  padding: 100px;
+  text-align: center;
+  font-size: 22px;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #222;
+  padding: 10px;
+  color: #ccc;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 250px;
+}
