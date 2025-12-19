@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-function CalculatorComponent(){
-
-    const [num1, setNum1] = useState("");
+function CalculatorComponent() {
+  const [num1, setNum1] = useState("");
   const [num2, setNum2] = useState("");
   const [operation, setOperation] = useState("add");
   const [results, setResults] = useState([]);
@@ -32,11 +31,9 @@ function CalculatorComponent(){
     setResults([...results, result]);
   };
 
-
-
   return (
-    <div className='calculator'>
-        <h2>Basic Calculator</h2>
+    <div className="calculator">
+      <h2>Basic Calculator</h2>
 
       <input
         type="number"
@@ -69,7 +66,7 @@ function CalculatorComponent(){
         </ul>
       </div>
     </div>
-  )
+  );
 }
 
-export default CalculatorComponent
+export default CalculatorComponent;
