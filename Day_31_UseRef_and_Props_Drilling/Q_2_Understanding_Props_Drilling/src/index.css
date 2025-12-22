@@ -1,1 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+}
 
+h2 {
+  text-align: center;
+  color: #222;
+}
+
+h3 {
+  margin-bottom: 8px;
+  color: #0a3d62;
+}
+
+h4 {
+  margin: 4px 0;
+  font-weight: normal;
+  color: #333;
+}
+
+/* Common box style for all components */
+.component {
+  border: 2px solid #ccc;
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+/* Increasing indent to show depth */
+.component2 {
+  margin-left: 20px;
+}
+.component3 {
+  margin-left: 40px;
+}
+.component4 {
+  margin-left: 60px;
+}
+.component5 {
+  margin-left: 80px;
+}
+.component6 {
+  margin-left: 100px;
+}

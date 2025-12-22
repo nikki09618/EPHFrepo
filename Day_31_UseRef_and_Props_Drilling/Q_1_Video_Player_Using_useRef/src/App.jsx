@@ -1,12 +1,15 @@
-import MyButton from "./MyButton";
+import SingleVideoPlayer from "./SingleVideoPlayer";
+import MultiVideoPlayer from "./MultiVideoPlayer";
 
-function App(){
-  return <div>
-   <h1>This is my Webpage</h1>
-   <MyButton></MyButton>
-  </div>
-
+function App() {
+  return (
+    <div>
+      <SingleVideoPlayer />
+      <hr />
+      <MultiVideoPlayer />
+    </div>
+  );
 }
-  
+
 
 export default App;
