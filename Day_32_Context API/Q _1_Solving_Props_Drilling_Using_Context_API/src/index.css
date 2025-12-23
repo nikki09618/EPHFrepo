@@ -1,0 +1,56 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  padding: 20px;
+}
+
+/* Common box style for all components */
+.component-box {
+  border: 2px solid #333;
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+/* Different colors to show hierarchy clearly */
+.component-1 {
+  border-color: #1abc9c;
+}
+
+.component-2 {
+  border-color: #3498db;
+  margin-left: 20px;
+}
+
+.component-3 {
+  border-color: #9b59b6;
+  margin-left: 40px;
+}
+
+.component-4 {
+  border-color: #e67e22;
+  margin-left: 60px;
+}
+
+.component-5 {
+  border-color: #e74c3c;
+  margin-left: 80px;
+}
+
+.component-6 {
+  border-color: #2c3e50;
+  margin-left: 100px;
+}
+
+/* Headings */
+h3 {
+  margin: 0 0 8px;
+  color: #222;
+}
+
+h4 {
+  margin: 4px 0;
+  font-weight: normal;
+}
