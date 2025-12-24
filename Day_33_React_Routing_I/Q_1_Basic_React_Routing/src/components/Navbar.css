@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: #1e1e2f;
+  color: white;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  color: #fff;
+  border-bottom: 2px solid #61dafb;
+}
