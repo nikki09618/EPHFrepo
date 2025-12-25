@@ -8,7 +8,6 @@ import { Link } from "react-router-dom"
 
 function App() {
   return (
-    <>
     
       <BrowserRouter>
         <Routes>
@@ -36,7 +35,6 @@ function App() {
       <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
-    </>
   );
 }
 
